@@ -17,6 +17,26 @@ public void setup()
 public boolean palindrome(String word)
 {
   //your code here
+  String n = new String();
+  String q = new String();
+  for(int i = word.length()-1; i> -1; i--)
+  {
+    if(Character.isLetter(word.charAt(i))==true)
+    {
+      n = n + word.substring(i,i+1).toLowerCase();
+    }
+  }
+  for(int i = 0; i<word.length(); i++)
+  {
+    if(Character.isLetter(word.charAt(i))==true)
+    {
+      q = q + word.substring(i,i+1).toLowerCase();
+    }
+  }
+  if(n.equals(q))
+  {
+    return true;
+  }
   return false;
 }
 public String reverse(String str)
@@ -24,6 +44,7 @@ public String reverse(String str)
     String sNew = new String();
     //your code here
     return sNew;
+
 }
 
 
